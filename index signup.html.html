@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\soura\Downloads\favicon-32x32.png">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+        body{
+            background: url("../Downloads/bg-intro-mobile.png"),#ff7a7a;
+            background-position: center;
+            background-repeat: repeat;
+            font-size: 1em;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        @media (min-width:768px){
+            body{
+                background: url("../Downloads/bg-intro-desktop.png"),#ff7a7a;
+                background-position: center;
+                background-repeat: repeat;
+            }   
+        }
+        *{
+            box-sizing: border-box;
+        }
+        main{
+            min-height: 100vh;
+  max-width: min(100vw, 600px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+        }
+        @media (min-width:768px){
+            main{
+                max-width: min(90vw,1000px);
+                flex-direction: row;
+                gap: 1em;
+            }
+            main >*{
+                width: 50%;
+            }
+        }
+      .content{
+        color: white;
+        padding: 1em;
+        text-align: center;
+      }
+      .content h1{
+        line-height: 1.26em;
+      }
+      @media (min-width:768px){
+    .content{
+        text-align: left;
+        padding: 1.25em;
+        font-size: 0.9em;
+    }
+    .content h1{
+        font-size: 2.5em;
+    }
+      }
+      .signup {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  gap: 1.5em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.signup-pricing, .signup__form {
+  border-radius: 8px;
+}
+
+.signup-pricing {
+  box-shadow: 0px 0.45em 0px 0px #df6d6d;
+  background-color: #6055a5;
+  padding: 0.5em;
+  text-align: inherit;
+  color: white;
+  font-size: 0.8em;
+}
+.signup__form input {
+  width: 100%;
+  height: 3em;
+  padding: 0 1em;
+  margin-top: 0.9em;
+  font-family: inherit;
+  font-weight: bolder;
+}
+   .signup__form input:not([type=submit]){
+    border: 2px solid #4f36f3;
+    border-radius: 6px;
+   }
+   .signup__form input + span.error-icon{
+    position: absolute;
+    right: 2.5em;
+    padding-top: 1.25em;
+   }
+   .signup__form input + span.error-icon img {
+  height: 1em;
+  width: 1em;
+}
+.signup__form input ~ span.error-message {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-top: 0;
+  color: #ff7a7a;
+  font-size: 0.65em;
+  font-style: italic;
+  font-weight: 500;
+}
+.signup__form input.error {
+  border: 2px solid #ff7a7a;
+}
+input[type=submit] {
+  box-shadow: 1px 0.3em 2px 1px #057f48;
+  border: none;
+  border-radius: 4px;
+  background-color: #38cc8c;
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  box-shadow: 0px 0.3em 0px 0px #38cc8c;
+  background-color: #44e49f;
+  color: #4f36f3;
+}
+footer {
+  text-align: center;
+  color: white;
+  font-size: smaller;
+}
+footer a {
+  color: blue;
+}
+.terms-notice {
+  display: block;
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 0.75em;
+  color: #b9b6d3;
+}
+.terms-notice span {
+  color: #ff7a7a;
+  font-weight: bolder;
+}
+.signup__form{
+    background-color: aliceblue;
+    padding: 2em;
+    border-radius: 7px;
+    border:2px solid #6055a5;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1> Learn Coding Knowledges by Watching Others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                but understanding how developers think is invaluable.</p>
+        </div>
+        <div class="signup">
+            <div class="signup-pricing">
+                <p><strong>Try it free 7 days</strong> then $30/mo. thereafter</p>
+            </div>
+            <form action="#" class="signup__form">
+                <input type="text" name="first-name" id="first-name" aria-label="First Name" placeholder="First Name" required>
+                <input type="text" name="last-name" id="last-name" aria-label="Last Name" placeholder="Last Name" required>
+                <input type="email" name="email" id="email" aria-label="Email Address" placeholder="Email Address" required>
+                <input type="password" name="password" id="password" aria-label="Password" placeholder="Password" required>
+                <input type="submit" value="Claim your free trial" aria-label="Submit">
+                <span class="terms-notice">By clicking the button, you are agreeing to our <span>Terms and Services</span></span>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.linkedin.com/in/sourav-kundu-6b5538292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Tech sourav</a>. 
+            Coded by <a href="https://www.instagram.com/tech.sourav?igsh=dGxoMG9tczRvMjNw" >Sourav Kundu</a>.
+          </p>
+    </footer>
+    <script>
+        const inputs = document.querySelectorAll("input:not([type='submit'])");
+        inputs.forEach(input => {
+    // Add event listener for invalid inputs for all inputs
+    input.addEventListener('invalid', addErrorMessage);
+
+    // Check validity on every blur
+    input.addEventListener('blur', (event) => {
+        input.checkValidity();
+    })
+
+    // Remove existing error messages on focus
+    input.addEventListener('focus', removeErrorMessage);
+})
+
+function addErrorMessage(e) {
+    // Get input element name.
+    var name = e.target.getAttribute("name");
+
+    // Create an error icon element.
+    var error_icon = document.createElement('span');
+    error_icon.setAttribute("data-id", name);
+    error_icon.classList.add('error-icon');
+    error_icon.innerHTML = "<img src='Downloads/icon-error.svg' alt=''>";
+
+    // Create an error message.
+    var error_message = document.createElement('span');
+    error_message.setAttribute("data-id", name);
+    error_message.classList.add('error-message');
+
+    if (e.target.value == "" || e.target.value == null) error_message.innerHTML = "" + e.target.getAttribute("placeholder") + " cannot be empty.";
+    else error_message.innerHTML = "Looks like this is not an " + e.target.getAttribute("placeholder") + ".";
+
+    // Append error icon and message after input element
+    e.target.after(error_message);
+    e.target.after(error_icon);
+
+    // Add error class to input to change border color
+    e.target.classList.add('error');
+}
+
+function removeErrorMessage(e) {
+    // Get error icon and message elements corresponding to target.
+    var elements = document.querySelectorAll("[data-id='"+ e.target.getAttribute("name")+"']");
+
+    // Remove those elements.
+    elements.forEach(error_element => {
+        error_element.remove();
+    })
+
+    // Remove error class from input.
+    e.target.classList.remove('error');
+}
+    </script>
+</body>
+</html>
